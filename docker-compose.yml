@@ -1,0 +1,8 @@
+version: '3'
+services:
+  linuxforphp-8.2:
+    image: asclinux/linuxforphp-8.2:8.0.0dev-nts
+    build: ./linuxforphp-8.2
+    command: /bin/lfphp --phpfpm --apache </dev/null >/dev/null 2&>1 &
+    ports:
+     - "8181:80"
